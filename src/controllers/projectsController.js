@@ -1,8 +1,8 @@
 import express from 'express';
 
 const projects = [
-  { id: '1', title: 'Novo projeto', tasks: [] },
-  { id: '2', title: 'Novo project', tasks: [] }
+  { id: '1', title: 'New project', tasks: [] },
+  { id: '2', title: 'Another project', tasks: [] }
 ];
 
 class projectsController {
