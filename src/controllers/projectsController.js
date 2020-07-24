@@ -31,13 +31,58 @@ class projectsController {
     let index;
 
     for (let i = 0; i < projects.length; i++) {
-      if (projects[i].id === id)
-        index = i;
+      if (projects[i].id === id) index = i;
     }
 
     projects[index].title = title;
+    const project = projects[index];
 
-    return res.json({ ok: true });
+    return res.json(project);
+  }
+
+  delete(req, res) {
+    const { id } = req.params;
+
+    let index;
+
+    for (let i = 0; i < projects.length; i++) {
+      if (projects[i].id === id) index = i;
+    }
+
+    const project = projects[index];
+    projects.splice(projects[index], 1);
+
+    return res.json(project);
+  }
+
+  projectTasks(req, res) {
+    const { id } = req.params;
+    const { title } = req.body;
+
+    let index;
+
+    for (let i = 0; i < projects.length; i++) {
+      if (projects[i].id === id) index = i;
+    }
+
+    projects[index].tasks.push(title);
+    const project = projects[index];
+
+    return res.json(project);
+  }
+
+  idCheck(req, res, next) {
+    const { id } = req.params;
+
+    let projectExists = false;
+
+    for (let i = 0; i < projects.length; i++) {
+      if (projects[i].id === id) projectExists = true;
+    }
+
+    if (!projectExists) return res.status(400).json({ error: 'Project don\'t exist' });
+
+    return next();
   }
 }
 
