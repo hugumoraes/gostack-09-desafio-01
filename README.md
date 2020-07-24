@@ -1,7 +1,3 @@
-<h1 align="center">
-    <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" width="200px" />
-</h1>
-
 <h3 align="center">
   Challenge 1: NodeJS Concepts
 </h3>
@@ -18,11 +14,6 @@
   <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-01?style=social">
   </a>
-</p>
-
-<p align="center">
-  <a href="#rocket-sobre-o-desafio">About the challenge</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">License</a>
 </p>
 
 ## :rocket: About the challenge
